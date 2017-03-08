@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout 
+        android:layout_above="@+id/llWheelVerticalView"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="40dp">
+        
+        <Button 
+            android:id="@+id/btnCancel"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:background="@null"
+            android:text="取消"/>
+        
+        <Button 
+            android:id="@+id/btnConfirm"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:background="@null"
+            android:text="确定"/>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llWheelVerticalView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:weightSum="2"
+        android:background="#F0F0F0"
+        android:orientation="horizontal" >
+
+        <com.workspace.bin.wheelviewdemo.datepicker.WheelView
+            android:id="@+id/country"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <com.workspace.bin.wheelviewdemo.datepicker.WheelView
+            android:id="@+id/city"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>
